@@ -20,6 +20,6 @@ create_clock -period $Clock
 
 csim_design
 csynth_design
-cosim_design
+cosim_design -trace_level all
 
 exit
