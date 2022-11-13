@@ -1,0 +1,1139 @@
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'Anderson' on host 'desktop-iduqo1o' (Windows NT_amd64 version 6.2) on Sun Nov 13 16:34:42 +0800 2022
+INFO: [HLS 200-10] In directory 'D:/canny_final'
+Sourcing Tcl script 'D:/canny_final/canny/solution3/csynth.tcl'
+INFO: [HLS 200-1510] Running: source D:/canny_final/canny/solution3/csynth.tcl
+INFO: [HLS 200-1510] Running: open_project canny 
+INFO: [HLS 200-10] Opening project 'D:/canny_final/canny'.
+INFO: [HLS 200-1510] Running: set_top canny 
+INFO: [HLS 200-1510] Running: add_files canny.cpp -cflags -I. 
+INFO: [HLS 200-10] Adding design file 'canny.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files canny.hpp -cflags -I. 
+INFO: [HLS 200-10] Adding design file 'canny.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb src.txt -cflags -I. -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'src.txt' to the project
+INFO: [HLS 200-1510] Running: add_files -tb dst.txt -cflags -I. -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'dst.txt' to the project
+INFO: [HLS 200-1510] Running: add_files -tb canny_test.cpp -cflags -I. -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'canny_test.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution3 -flow_target vitis 
+INFO: [HLS 200-10] Opening solution 'D:/canny_final/canny/solution3'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./canny/solution3/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name canny canny 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.022 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] Analyzing design file 'canny.cpp' ... 
+WARNING: [HLS 207-5292] unused parameter 'stride' (canny.cpp:22:49)
+WARNING: [HLS 207-5292] unused parameter 'width' (canny.cpp:600:15)
+WARNING: [HLS 207-5292] unused parameter 'height' (canny.cpp:601:9)
+WARNING: [HLS 207-5292] unused parameter 'width' (canny.cpp:725:9)
+WARNING: [HLS 207-5292] unused parameter 'height' (canny.cpp:726:9)
+WARNING: [HLS 207-5292] unused parameter 'stride' (canny.cpp:727:9)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 10.299 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+WARNING: [HLS 214-273] In function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)', Pragma conflict happens on 'INLINE' and DATAFLOW pragmas: Inline into dataflow region may break the canonical form (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed.h:183:0)
+WARNING: [HLS 214-273] In function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const', Pragma conflict happens on 'INLINE' and DATAFLOW pragmas: Inline into dataflow region may break the canonical form (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1466:0)
+WARNING: [HLS 214-273] In function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)', Pragma conflict happens on 'INLINE' and DATAFLOW pragmas: Inline into dataflow region may break the canonical form (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:576:0)
+WARNING: [HLS 214-273] In function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)', Pragma conflict happens on 'INLINE' and DATAFLOW pragmas: Inline into dataflow region may break the canonical form (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:847:0)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:576:146)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed.h:183:79)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:576:146)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<43, 20, true>::mult ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator*<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1316:55)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<86, 40, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<43, 20, true>::mult ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator*<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1320:12)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<43, 20, true>::mult ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator*<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1316:61)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:576:146)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi87ELb1EEC2EDq87_i' into 'ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:447:80)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:449:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi87ELb1EEC2EDq87_i' into 'ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:447:80)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:449:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<86, 40, true>::plus ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1393:325)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<87, 41, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<86, 40, true>::plus ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1393:385)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<86, 40, true>::plus ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1393:345)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<86, 40, true>::plus ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1393:333)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<86, 40, true>::plus ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+=<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1413:248)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<87, 41, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+=<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1413:246)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<44, 21, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<32, 32, true>::div ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator/<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1378:12)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<($_0)32, ($_0)32, true>::div operator/<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&, int)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:2422:2808)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<32, 32, true>::div ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator/<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<($_0)32, ($_0)32, true>::div operator/<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&, int)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:2422:2797)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi43ELb1EEC2EDq43_i' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:447:80)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:449:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed.h:75:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Filter2DG(int, int, ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3], hls::stream<window, 0>&, hls::stream<ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (canny.cpp:421:19)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<($_0)32, ($_0)32, true>::div operator/<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&, int)' into 'Filter2DG(int, int, ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3], hls::stream<window, 0>&, hls::stream<ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (canny.cpp:421:22)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+=<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Filter2DG(int, int, ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3], hls::stream<window, 0>&, hls::stream<ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (canny.cpp:418:25)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<43, 20, true>::mult ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator*<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' into 'Filter2DG(int, int, ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3], hls::stream<window, 0>&, hls::stream<ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (canny.cpp:418:33)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'Filter2DG(int, int, ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3], hls::stream<window, 0>&, hls::stream<ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (canny.cpp:416:29)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'Filter2DG(int, int, ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3], hls::stream<window, 0>&, hls::stream<ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (canny.cpp:406:25)
+INFO: [HLS 214-131] Inlining function 'ssdm_int<64, true>::ssdm_int(long)' into 'ap_int_base<64, true>::ap_int_base(long)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:262:68)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi65ELb1EEC2EDq65_i' into 'ap_int_base<65, true>::ap_int_base<11, false>(ap_int_base<11, false> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:231:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi65ELb1EEC2EDq65_i' into 'ap_int_base<65, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:231:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi65ELb1EEC2EDq65_i' into 'ap_int_base<65, true>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::ap_int_base<11, false>(ap_int_base<11, false> const&)' into 'ap_int_base<11, false>::RType<64, true>::minus operator-<11, false, 64, true>(ap_int_base<11, false> const&, ap_int_base<64, true> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1542:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<65>::ap_int<65, true>(ap_int_base<65, true> const&)' into 'ap_int_base<11, false>::RType<64, true>::minus operator-<11, false, 64, true>(ap_int_base<11, false> const&, ap_int_base<64, true> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1542:558)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::ap_int_base(int)' into 'ap_int_base<11, false>::RType<64, true>::minus operator-<11, false, 64, true>(ap_int_base<11, false> const&, ap_int_base<64, true> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1542:520)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<11, false>::RType<64, true>::minus operator-<11, false, 64, true>(ap_int_base<11, false> const&, ap_int_base<64, true> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1542:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::ap_int_base(long)' into 'ap_int_base<11, false>::RType<($_0)64, true>::minus operator-<11, false>(ap_int_base<11, false> const&, long)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1681:1548)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<11, false>::RType<64, true>::minus operator-<11, false, 64, true>(ap_int_base<11, false> const&, ap_int_base<64, true> const&)' into 'ap_int_base<11, false>::RType<($_0)64, true>::minus operator-<11, false>(ap_int_base<11, false> const&, long)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1681:1546)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi1ELb0EEC2EDq1_j' into 'ap_int_base<1, false>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi55ELb1EEC2EDq55_i' into 'ap_int_base<55, true>::ap_int_base<1, false>(ap_int_base<1, false> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:231:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi55ELb1EEC2EDq55_i' into 'ap_int_base<55, true>::ap_int_base<54, true>(ap_int_base<54, true> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:231:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi55ELb1EEC2EDq55_i' into 'ap_int_base<55, true>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<55, true>::ap_int_base<1, false>(ap_int_base<1, false> const&)' into 'ap_int_base<1, false>::RType<54, true>::minus operator-<1, false, 54, true>(ap_int_base<1, false> const&, ap_int_base<54, true> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1542:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<55>::ap_int<55, true>(ap_int_base<55, true> const&)' into 'ap_int_base<1, false>::RType<54, true>::minus operator-<1, false, 54, true>(ap_int_base<1, false> const&, ap_int_base<54, true> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1542:558)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<55, true>::ap_int_base(int)' into 'ap_int_base<1, false>::RType<54, true>::minus operator-<1, false, 54, true>(ap_int_base<1, false> const&, ap_int_base<54, true> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1542:520)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<55, true>::ap_int_base<54, true>(ap_int_base<54, true> const&)' into 'ap_int_base<1, false>::RType<54, true>::minus operator-<1, false, 54, true>(ap_int_base<1, false> const&, ap_int_base<54, true> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1542:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(int)' into 'ap_int_base<54, true>::operator-() const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:941:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::RType<54, true>::minus operator-<1, false, 54, true>(ap_int_base<1, false> const&, ap_int_base<54, true> const&)' into 'ap_int_base<54, true>::operator-() const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:941:37)
+INFO: [HLS 214-131] Inlining function 'doubleToRawBits(double)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(double)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:591:14)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<54, true>& ap_int_base<54, true>::operator=<55, true>(ap_int_base<55, true> const&)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(double)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:605:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<54, true>::operator-() const' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(double)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:605:22)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<12, true>& ap_int_base<12, true>::operator=<65, true>(ap_int_base<65, true> const&)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(double)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:598:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<11, false>::RType<($_0)64, true>::minus operator-<11, false>(ap_int_base<11, false> const&, long)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(double)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:598:19)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<55, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<55, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi55ELb1EEC2EDq55_i' into 'ap_fixed_base<55, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:447:80)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<55, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<55, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<55, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:449:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<55, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'bool ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator>=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1697:370)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'bool operator>=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&, int)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:2422:11183)
+INFO: [HLS 214-131] Inlining function 'bool ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator>=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' into 'bool operator>=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&, int)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:2422:11171)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:576:146)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi44ELb1EEC2EDq44_i' into 'ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:447:80)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:449:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<43, 20, true>::plus ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1393:325)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<44, 21, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<43, 20, true>::plus ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1393:385)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<43, 20, true>::plus ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1393:345)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<43, 20, true>::plus ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1393:333)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<43, 20, true>::plus ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1413:248)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1413:246)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<43, 20, true>::minus ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator-<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1394:327)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<44, 21, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<43, 20, true>::minus ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator-<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1394:387)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<43, 20, true>::minus ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator-<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1394:347)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<43, 20, true>::minus ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator-<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1394:335)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<43, 20, true>::minus ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator-<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator-=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1414:248)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<44, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator-=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1414:246)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi20ELb1EEC2EDq20_i' into 'ap_int_base<20, true>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ssdm_int<32, true>::ssdm_int(int)' into 'ap_int_base<32, true>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi33ELb1EEC2EDq33_i' into 'ap_int_base<33, true>::ap_int_base<20, true>(ap_int_base<20, true> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:231:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi33ELb1EEC2EDq33_i' into 'ap_int_base<33, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:231:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi33ELb1EEC2EDq33_i' into 'ap_int_base<33, true>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::ap_int_base<20, true>(ap_int_base<20, true> const&)' into 'ap_int_base<20, true>::RType<32, true>::plus operator+<20, true, 32, true>(ap_int_base<20, true> const&, ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<33>::ap_int<33, true>(ap_int_base<33, true> const&)' into 'ap_int_base<20, true>::RType<32, true>::plus operator+<20, true, 32, true>(ap_int_base<20, true> const&, ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541:554)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::ap_int_base(int)' into 'ap_int_base<20, true>::RType<32, true>::plus operator+<20, true, 32, true>(ap_int_base<20, true> const&, ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541:516)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<20, true>::RType<32, true>::plus operator+<20, true, 32, true>(ap_int_base<20, true> const&, ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<20, true>::RType<($_0)32, true>::plus operator+<20, true>(ap_int_base<20, true> const&, int)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1679:1006)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<20, true>::RType<32, true>::plus operator+<20, true, 32, true>(ap_int_base<20, true> const&, ap_int_base<32, true> const&)' into 'ap_int_base<20, true>::RType<($_0)32, true>::plus operator+<20, true>(ap_int_base<20, true> const&, int)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1679:1004)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<20, true>::ap_int_base(int)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_ap_int_base(bool) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1029:57)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<20, true>& ap_int_base<20, true>::operator=<33, true>(ap_int_base<33, true> const&)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_ap_int_base(bool) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1052:13)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<20, true>::RType<($_0)32, true>::plus operator+<20, true>(ap_int_base<20, true> const&, int)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_ap_int_base(bool) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1052:19)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_ap_int_base(bool) const' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_int() const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1068:89)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<20, true>::to_int() const' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_int() const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1068:106)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_int() const' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator int() const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1243:91)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(double)' into 'Filter2DS(int, int, ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3], hls::stream<windowf, 0>&, hls::stream<int, 0>&)' (canny.cpp:495:17)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator int() const' into 'Filter2DS(int, int, ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3], hls::stream<windowf, 0>&, hls::stream<int, 0>&)' (canny.cpp:537:31)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator-=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Filter2DS(int, int, ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3], hls::stream<windowf, 0>&, hls::stream<int, 0>&)' (canny.cpp:535:18)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Filter2DS(int, int, ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3], hls::stream<windowf, 0>&, hls::stream<int, 0>&)' (canny.cpp:532:18)
+INFO: [HLS 214-131] Inlining function 'bool operator>=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&, int)' into 'Filter2DS(int, int, ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3], hls::stream<windowf, 0>&, hls::stream<int, 0>&)' (canny.cpp:531:21)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+=<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<86, 40, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Filter2DS(int, int, ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3], hls::stream<windowf, 0>&, hls::stream<int, 0>&)' (canny.cpp:520:25)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<43, 20, true>::mult ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator*<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' into 'Filter2DS(int, int, ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3], hls::stream<windowf, 0>&, hls::stream<int, 0>&)' (canny.cpp:520:33)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'Filter2DS(int, int, ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3], hls::stream<windowf, 0>&, hls::stream<int, 0>&)' (canny.cpp:509:25)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:576:146)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<32, 32, true>::mult ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator*<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1316:55)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<75, 52, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<32, 32, true>::mult ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator*<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1320:12)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<32, 32, true>::mult ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator*<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1316:61)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<($_0)32, ($_0)32, true>::mult operator*<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&, int)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:2422:1989)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<32, 32, true>::mult ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator*<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<($_0)32, ($_0)32, true>::mult operator*<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&, int)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:2422:1978)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi43ELb1EEC2EDq43_i' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:447:80)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:449:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed.h:75:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<56, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<56, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi56ELb1EEC2EDq56_i' into 'ap_fixed_base<56, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:447:80)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<56, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<56, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<56, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:449:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<56, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'bool ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator><43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1695:502)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'bool operator><43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:2422:10243)
+INFO: [HLS 214-131] Inlining function 'bool ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator><43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' into 'bool operator><43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:2422:10303)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<56, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'bool ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1698:505)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'bool operator<=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:2422:12098)
+INFO: [HLS 214-131] Inlining function 'bool ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' into 'bool operator<=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:2422:12158)
+INFO: [HLS 214-131] Inlining function 'bool operator><43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:713:28)
+INFO: [HLS 214-131] Inlining function 'bool operator<=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:710:29)
+INFO: [HLS 214-131] Inlining function 'bool operator<=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:707:41)
+INFO: [HLS 214-131] Inlining function 'bool operator><43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:707:24)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(double)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:704:27)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(double)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:703:27)
+INFO: [HLS 214-131] Inlining function 'bool operator><43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:695:28)
+INFO: [HLS 214-131] Inlining function 'bool operator<=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:692:29)
+INFO: [HLS 214-131] Inlining function 'bool operator<=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:689:41)
+INFO: [HLS 214-131] Inlining function 'bool operator><43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:689:24)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:686:27)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<($_0)32, ($_0)32, true>::mult operator*<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&, int)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:686:35)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:685:27)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<($_0)32, ($_0)32, true>::mult operator*<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&, int)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:685:35)
+INFO: [HLS 214-131] Inlining function 'bool operator><43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:677:28)
+INFO: [HLS 214-131] Inlining function 'bool operator<=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:674:29)
+INFO: [HLS 214-131] Inlining function 'bool operator<=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:671:41)
+INFO: [HLS 214-131] Inlining function 'bool operator><43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:671:24)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:668:27)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<($_0)32, ($_0)32, true>::mult operator*<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&, int)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:668:35)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:667:27)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<($_0)32, ($_0)32, true>::mult operator*<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&, int)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:667:35)
+INFO: [HLS 214-131] Inlining function 'bool operator><43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:658:28)
+INFO: [HLS 214-131] Inlining function 'bool operator<=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:655:29)
+INFO: [HLS 214-131] Inlining function 'bool operator<=<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:652:41)
+INFO: [HLS 214-131] Inlining function 'bool operator><43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:652:24)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:649:27)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<($_0)32, ($_0)32, true>::mult operator*<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&, int)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:649:35)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<75, 52, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:648:27)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<($_0)32, ($_0)32, true>::mult operator*<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&, int)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:648:35)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(double)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:645:20)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(double)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:644:20)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:788:12)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:788:10)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:788:8)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:787:12)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:787:10)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:787:8)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:786:14)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:786:11)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:786:8)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:782:13)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:782:11)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:782:8)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:781:13)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:781:11)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:781:8)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:780:13)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:780:11)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:780:8)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:774:14)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:774:11)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:774:8)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:773:14)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:773:11)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:773:8)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:772:14)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:772:11)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'canny(int*, int*, int, int)' (canny.cpp:772:8)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_262_1' is marked as complete unroll implied by the pipeline pragma (canny.cpp:262:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_263_2' is marked as complete unroll implied by the pipeline pragma (canny.cpp:263:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_271_3' is marked as complete unroll implied by the pipeline pragma (canny.cpp:271:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_189_1' is marked as complete unroll implied by the pipeline pragma (canny.cpp:189:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_190_2' is marked as complete unroll implied by the pipeline pragma (canny.cpp:190:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_198_3' is marked as complete unroll implied by the pipeline pragma (canny.cpp:198:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_510_2' is marked as complete unroll implied by the pipeline pragma (canny.cpp:510:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_512_3' is marked as complete unroll implied by the pipeline pragma (canny.cpp:512:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_335_1' is marked as complete unroll implied by the pipeline pragma (canny.cpp:335:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_336_2' is marked as complete unroll implied by the pipeline pragma (canny.cpp:336:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_344_3' is marked as complete unroll implied by the pipeline pragma (canny.cpp:344:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_407_2' is marked as complete unroll implied by the pipeline pragma (canny.cpp:407:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_409_3' is marked as complete unroll implied by the pipeline pragma (canny.cpp:409:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_119_1' is marked as complete unroll implied by the pipeline pragma (canny.cpp:119:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_120_2' is marked as complete unroll implied by the pipeline pragma (canny.cpp:120:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_127_3' is marked as complete unroll implied by the pipeline pragma (canny.cpp:127:27)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_262_1' (canny.cpp:262:27) in function 'Window2DD' completely with a factor of 3 (canny.cpp:232:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_263_2' (canny.cpp:263:31) in function 'Window2DD' completely with a factor of 2 (canny.cpp:232:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_271_3' (canny.cpp:271:27) in function 'Window2DD' completely with a factor of 1 (canny.cpp:232:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_189_1' (canny.cpp:189:27) in function 'Window2DM' completely with a factor of 3 (canny.cpp:160:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_190_2' (canny.cpp:190:31) in function 'Window2DM' completely with a factor of 2 (canny.cpp:160:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_198_3' (canny.cpp:198:27) in function 'Window2DM' completely with a factor of 1 (canny.cpp:160:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_510_2' (canny.cpp:510:31) in function 'Filter2DS' completely with a factor of 3 (canny.cpp:483:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_512_3' (canny.cpp:512:35) in function 'Filter2DS' completely with a factor of 3 (canny.cpp:483:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_335_1' (canny.cpp:335:27) in function 'Window2DS' completely with a factor of 3 (canny.cpp:305:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_336_2' (canny.cpp:336:31) in function 'Window2DS' completely with a factor of 2 (canny.cpp:305:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_344_3' (canny.cpp:344:27) in function 'Window2DS' completely with a factor of 1 (canny.cpp:305:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_407_2' (canny.cpp:407:31) in function 'Filter2DG' completely with a factor of 3 (canny.cpp:381:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_409_3' (canny.cpp:409:35) in function 'Filter2DG' completely with a factor of 3 (canny.cpp:381:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_119_1' (canny.cpp:119:27) in function 'Window2DG' completely with a factor of 3 (canny.cpp:90:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_120_2' (canny.cpp:120:31) in function 'Window2DG' completely with a factor of 2 (canny.cpp:90:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_127_3' (canny.cpp:127:27) in function 'Window2DG' completely with a factor of 1 (canny.cpp:90:0)
+INFO: [HLS 214-178] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(double)' into 'Filter2DS(int, int, ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3], hls::stream<windowf, 0>&, hls::stream<int, 0>&)' (canny.cpp:483:0)
+INFO: [HLS 214-178] Inlining function 'ap_fixed_base<43, 20, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(double)' into 'Magnitude_Direction(hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (canny.cpp:635:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (canny.cpp:449:12)
+WARNING: [HLS 214-167] The program may have out of bound array access (canny.cpp:450:20)
+WARNING: [HLS 214-167] The program may have out of bound array access (canny.cpp:454:20)
+WARNING: [HLS 214-167] The program may have out of bound array access (canny.cpp:455:24)
+INFO: [HLS 214-248] Applying array_partition to 'LineBuffer': Complete partitioning on dimension 1. (canny.cpp:92:11)
+INFO: [HLS 214-248] Applying array_partition to 'LineBuffer': Complete partitioning on dimension 1. (canny.cpp:307:11)
+INFO: [HLS 214-248] Applying array_partition to 'LineBuffer': Complete partitioning on dimension 1. (canny.cpp:162:11)
+INFO: [HLS 214-248] Applying array_partition to 'LineBuffer': Complete partitioning on dimension 1. (canny.cpp:234:10)
+INFO: [HLS 214-248] Applying array_partition to 'gaussianCoeffs': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (canny.cpp:771:11)
+INFO: [HLS 214-248] Applying array_partition to 'sobelxCoeffs': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (canny.cpp:779:11)
+INFO: [HLS 214-248] Applying array_partition to 'sobelyCoeffs': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (canny.cpp:785:11)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'gradient_window_stream' with compact=bit mode in 288-bits (canny.cpp:763:27)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'Magnitude_Direction_window_stream' with compact=bit mode in 288-bits (canny.cpp:762:27)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'window_stream' with compact=bit mode in 288-bits (canny.cpp:751:27)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'sobely_window_stream' with compact=bit mode in 387-bits (canny.cpp:757:28)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'sobelx_window_stream' with compact=bit mode in 387-bits (canny.cpp:756:28)
+INFO: [HLS 214-115] Multiple burst reads of length 1024 and bit width 512 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (canny.cpp:35:22)
+INFO: [HLS 214-115] Multiple burst writes of length 1024 and bit width 512 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (canny.cpp:733:15)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i288.s_struct.windows' into 'Window2DG(int, int, hls::stream<int, 0>&, hls::stream<window, 0>&) (.1)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i288.s_struct.windows.1' into 'Window2DG(int, int, hls::stream<int, 0>&, hls::stream<window, 0>&) (.1)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i288.a3a3i32' into '_llvm.fpga.unpack.bits.s_struct.windows.i288.1'
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_struct.windows.i288.1' into 'Filter2DG(int, int, ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3], hls::stream<window, 0>&, hls::stream<ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&) (.1)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i43.s_struct.ap_fixed<43, 20, AP_TRN, AP_WRAP, 0>s' into 'Filter2DG(int, int, ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3], hls::stream<window, 0>&, hls::stream<ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&) (.1)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i576.s_struct.windowfs' into 'Window2DS(int, int, hls::stream<ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<windowf, 0>&) (.27.1)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i387.s_struct.windowfs.1' into 'Window2DS(int, int, hls::stream<ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<windowf, 0>&) (.27.1)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i576.a3a3s_struct.ap_fixed<43, 20, AP_TRN, AP_WRAP, 0>s' into '_llvm.fpga.unpack.bits.s_struct.windowfs.i387.1'
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_struct.windowfs.i387.1' into 'Filter2DS(int, int, ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3], hls::stream<windowf, 0>&, hls::stream<int, 0>&) (.28.1)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i576.s_struct.windowfs' into 'Window2DS(int, int, hls::stream<ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<windowf, 0>&) (.1)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i387.s_struct.windowfs.1' into 'Window2DS(int, int, hls::stream<ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<windowf, 0>&) (.1)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_struct.windowfs.i387.1' into 'Filter2DS(int, int, ap_fixed<43, 20, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3], hls::stream<windowf, 0>&, hls::stream<int, 0>&) (.1)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i288.s_struct.windows' into 'Window2DM(int, int, hls::stream<int, 0>&, hls::stream<window, 0>&) (.1)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i288.s_struct.windows.1' into 'Window2DM(int, int, hls::stream<int, 0>&, hls::stream<window, 0>&) (.1)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i288.s_struct.windows' into 'Window2DD(int, int, hls::stream<int, 0>&, hls::stream<window, 0>&) (.1)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i288.s_struct.windows.1' into 'Window2DD(int, int, hls::stream<int, 0>&, hls::stream<window, 0>&) (.1)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_struct.windows.i288.1' into 'NMS(int, int, hls::stream<window, 0>&, hls::stream<window, 0>&, hls::stream<int, 0>&) (.1)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 11.874 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.004 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 3.946 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 3.918 seconds; current allocated memory: 1.457 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_57_3' (canny.cpp:57) in function 'ReadFromMem' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_62_4' (canny.cpp:62) in function 'ReadFromMem' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_76_5' (canny.cpp:29) in function 'ReadFromMem' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_530_4' (canny.cpp:496) in function 'Filter2DS.2' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_530_4' (canny.cpp:496) in function 'Filter2DS' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_448_4' (canny.cpp:448) in function 'Filter2DG' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_453_5' (canny.cpp:453) in function 'Filter2DG' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_468_6' (canny.cpp:392) in function 'Filter2DG' automatically.
+INFO: [XFORM 203-712] Applying dataflow to function 'canny' (canny.cpp:742), detected/extracted 15 process function(s): 
+	 'entry_proc'
+	 'ReadFromMem'
+	 'Window2DG'
+	 'Filter2DG'
+	 'Split'
+	 'Window2DS'
+	 'Filter2DS'
+	 'Window2DS.1'
+	 'Filter2DS.2'
+	 'Magnitude_Direction'
+	 'Window2DM'
+	 'Window2DD'
+	 'NMS'
+	 'Threshold'
+	 'WriteToMem'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (canny.cpp:639:9) to (canny.cpp:638:20) in function 'Magnitude_Direction'... converting 22 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (canny.cpp:496:9) to (canny.cpp:530:23) in function 'Filter2DS.2'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (canny.cpp:496:9) to (canny.cpp:530:23) in function 'Filter2DS'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 4.556 seconds; current allocated memory: 1.457 GB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_35_1' (canny.cpp:28:6) in function 'ReadFromMem'.
+INFO: [XFORM 203-541] Flattening a loop nest 'apply_filter' (canny.cpp:559:28) in function 'NMS'.
+INFO: [XFORM 203-541] Flattening a loop nest 'apply_filter' (canny.cpp:499:28) in function 'Filter2DS.2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'apply_filter' (canny.cpp:499:28) in function 'Filter2DS'.
+INFO: [XFORM 203-541] Flattening a loop nest 'apply_filter' (canny.cpp:398:28) in function 'Filter2DG'.
+INFO: [HLS 200-472] Inferring partial write operation for 'LineBuffer.V' (canny.cpp:345:36)
+INFO: [HLS 200-472] Inferring partial write operation for 'LineBuffer.V.1' (canny.cpp:347:35)
+INFO: [HLS 200-472] Inferring partial write operation for 'LineBuffer.V' (canny.cpp:345:36)
+INFO: [HLS 200-472] Inferring partial write operation for 'LineBuffer.V.2' (canny.cpp:347:35)
+INFO: [HLS 200-472] Inferring partial write operation for 'LineBuffer' (canny.cpp:199:36)
+INFO: [HLS 200-472] Inferring partial write operation for 'LineBuffer.1' (canny.cpp:201:35)
+INFO: [HLS 200-472] Inferring partial write operation for 'LineBuffer' (canny.cpp:128:36)
+INFO: [HLS 200-472] Inferring partial write operation for 'LineBuffer_1' (canny.cpp:130:35)
+INFO: [HLS 200-472] Inferring partial write operation for 'LineBuffer' (canny.cpp:272:36)
+INFO: [HLS 200-472] Inferring partial write operation for 'LineBuffer_1' (canny.cpp:274:35)
+INFO: [HLS 200-472] Inferring partial write operation for 'pad' (canny.cpp:38:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'tempup' (canny.cpp:40:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'templeft' (canny.cpp:43:26)
+INFO: [HLS 200-472] Inferring partial write operation for 'tempdown' (canny.cpp:47:26)
+INFO: [HLS 200-472] Inferring partial write operation for 'tempright' (canny.cpp:50:27)
+INFO: [HLS 200-472] Inferring partial write operation for 'pad' (canny.cpp:58:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'pad' (canny.cpp:59:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'pad' (canny.cpp:63:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'pad' (canny.cpp:64:26)
+INFO: [HLS 200-472] Inferring partial write operation for 'pad' (canny.cpp:66:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'pad' (canny.cpp:68:15)
+INFO: [HLS 200-472] Inferring partial write operation for 'pad' (canny.cpp:70:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'pad' (canny.cpp:73:27)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp.V' (canny.cpp:525:27)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp.V' 
+INFO: [HLS 200-472] Inferring partial write operation for 'temp.V' (canny.cpp:525:27)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp.V' 
+INFO: [HLS 200-472] Inferring partial write operation for 'tempup.V' (canny.cpp:428:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'templeft.V' (canny.cpp:433:26)
+INFO: [HLS 200-472] Inferring partial write operation for 'tempdown.V' (canny.cpp:437:26)
+INFO: [HLS 200-472] Inferring partial write operation for 'tempright.V' (canny.cpp:441:27)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp.V' (canny.cpp:423:31)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp.V' (canny.cpp:449:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp.V' (canny.cpp:450:20)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp.V' (canny.cpp:454:20)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp.V' (canny.cpp:455:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp.V' (canny.cpp:460:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp.V' (canny.cpp:462:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp.V' (canny.cpp:464:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp.V' (canny.cpp:466:28)
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer.V.1' (canny.cpp:307).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer.V' (canny.cpp:307).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer.V.1' (canny.cpp:307).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer.V' (canny.cpp:307).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer.V.2' (canny.cpp:307).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer.V' (canny.cpp:307).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer.V.2' (canny.cpp:307).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer.V' (canny.cpp:307).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer.1' (canny.cpp:162).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer' (canny.cpp:162).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer.1' (canny.cpp:162).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer' (canny.cpp:162).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer_1' (canny.cpp:92).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer' (canny.cpp:92).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer_1' (canny.cpp:92).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer' (canny.cpp:92).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer_1' (canny.cpp:234).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer' (canny.cpp:234).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer_1' (canny.cpp:234).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer' (canny.cpp:234).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pad' (canny.cpp:25).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pad' (canny.cpp:25).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer.V.1' (canny.cpp:307).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer.V' (canny.cpp:307).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer.V.1' (canny.cpp:307).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer.V' (canny.cpp:307).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer.V.2' (canny.cpp:307).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer.V' (canny.cpp:307).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer.V.2' (canny.cpp:307).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer.V' (canny.cpp:307).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer.1' (canny.cpp:162).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer' (canny.cpp:162).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer.1' (canny.cpp:162).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer' (canny.cpp:162).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer_1' (canny.cpp:92).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer' (canny.cpp:92).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer_1' (canny.cpp:92).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer' (canny.cpp:92).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer_1' (canny.cpp:234).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer' (canny.cpp:234).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer_1' (canny.cpp:234).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer' (canny.cpp:234).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'pad' (canny.cpp:25).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'pad' (canny.cpp:25).
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.54 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'canny' ...
+WARNING: [SYN 201-103] Legalizing function name 'Window2DS.1' to 'Window2DS_1'.
+WARNING: [SYN 201-103] Legalizing function name 'Filter2DS.2_Pipeline_apply_filter_VITIS_LOOP_502_1' to 'Filter2DS_2_Pipeline_apply_filter_VITIS_LOOP_502_1'.
+WARNING: [SYN 201-103] Legalizing function name 'Filter2DS.2_Pipeline_VITIS_LOOP_530_4' to 'Filter2DS_2_Pipeline_VITIS_LOOP_530_4'.
+WARNING: [SYN 201-103] Legalizing function name 'Filter2DS.2' to 'Filter2DS_2'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.848 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.173 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ReadFromMem_Pipeline_VITIS_LOOP_35_1_VITIS_LOOP_36_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_35_1_VITIS_LOOP_36_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_35_1_VITIS_LOOP_36_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.203 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ReadFromMem_Pipeline_VITIS_LOOP_57_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_57_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_57_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.172 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ReadFromMem_Pipeline_VITIS_LOOP_62_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_62_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_62_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.254 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.186 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ReadFromMem_Pipeline_VITIS_LOOP_76_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_76_5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_76_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.285 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ReadFromMem' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.364 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.689 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Window2DG' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'update_window'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'update_window'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.38 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.266 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Filter2DG_Pipeline_apply_filter_VITIS_LOOP_400_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'apply_filter_VITIS_LOOP_400_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 17, loop 'apply_filter_VITIS_LOOP_400_1'
+WARNING: [HLS 200-871] Estimated clock period (6.302ns) exceeds the target (target clock period: 8ns, clock uncertainty: 2.16ns, effective delay budget: 5.84ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'Filter2DG_Pipeline_apply_filter_VITIS_LOOP_400_1' consists of the following:	'load' operation ('x_load', canny.cpp:400) on local variable 'x' [21]  (0 ns)
+	'icmp' operation ('icmp_ln400', canny.cpp:400) [25]  (1.55 ns)
+	'select' operation ('select_ln398', canny.cpp:398) [26]  (1.25 ns)
+	'add' operation ('add_ln400', canny.cpp:400) [130]  (1.92 ns)
+	'store' operation ('x_write_ln400', canny.cpp:400) of variable 'add_ln400', canny.cpp:400 on local variable 'x' [133]  (1.59 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.492 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.36 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Filter2DG_Pipeline_VITIS_LOOP_448_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_448_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_448_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.457 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Filter2DG_Pipeline_VITIS_LOOP_453_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_453_5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_453_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.293 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.251 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Filter2DG_Pipeline_VITIS_LOOP_468_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_468_6'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_468_6'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.204 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Filter2DG' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.264 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.297 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Split' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_607_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_607_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.425 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.235 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Window2DS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'update_window'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'update_window'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.288 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.266 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Filter2DS_Pipeline_apply_filter_VITIS_LOOP_502_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'apply_filter_VITIS_LOOP_502_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 9, loop 'apply_filter_VITIS_LOOP_502_1'
+WARNING: [HLS 200-871] Estimated clock period (6.302ns) exceeds the target (target clock period: 8ns, clock uncertainty: 2.16ns, effective delay budget: 5.84ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'Filter2DS_Pipeline_apply_filter_VITIS_LOOP_502_1' consists of the following:	'load' operation ('x_load', canny.cpp:502) on local variable 'x' [17]  (0 ns)
+	'icmp' operation ('icmp_ln502', canny.cpp:502) [21]  (1.55 ns)
+	'select' operation ('select_ln499', canny.cpp:499) [22]  (1.25 ns)
+	'add' operation ('add_ln502', canny.cpp:502) [59]  (1.92 ns)
+	'store' operation ('x_write_ln502', canny.cpp:502) of variable 'add_ln502', canny.cpp:502 on local variable 'x' [62]  (1.59 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.466 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.299 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Filter2DS_Pipeline_VITIS_LOOP_530_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_530_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'VITIS_LOOP_530_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.396 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Filter2DS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.224 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.563 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Window2DS_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'update_window'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'update_window'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.364 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.751 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Filter2DS_2_Pipeline_apply_filter_VITIS_LOOP_502_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'apply_filter_VITIS_LOOP_502_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 9, loop 'apply_filter_VITIS_LOOP_502_1'
+WARNING: [HLS 200-871] Estimated clock period (6.302ns) exceeds the target (target clock period: 8ns, clock uncertainty: 2.16ns, effective delay budget: 5.84ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'Filter2DS_2_Pipeline_apply_filter_VITIS_LOOP_502_1' consists of the following:	'load' operation ('x_load', canny.cpp:502) on local variable 'x' [17]  (0 ns)
+	'icmp' operation ('icmp_ln502', canny.cpp:502) [21]  (1.55 ns)
+	'select' operation ('select_ln499', canny.cpp:499) [22]  (1.25 ns)
+	'add' operation ('add_ln502', canny.cpp:502) [59]  (1.92 ns)
+	'store' operation ('x_write_ln502', canny.cpp:502) of variable 'add_ln502', canny.cpp:502 on local variable 'x' [62]  (1.59 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.451 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.281 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Filter2DS_2_Pipeline_VITIS_LOOP_530_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_530_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'VITIS_LOOP_530_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.49 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.204 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Filter2DS_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.288 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.328 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Magnitude_Direction' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_638_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 26, loop 'VITIS_LOOP_638_1'
+WARNING: [HLS 200-871] Estimated clock period (6.442ns) exceeds the target (target clock period: 8ns, clock uncertainty: 2.16ns, effective delay budget: 5.84ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'Magnitude_Direction' consists of the following:	'sitodp' operation ('conv', canny.cpp:703) [104]  (6.44 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.567 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.578 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Window2DM' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'update_window'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'update_window'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.772 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.297 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Window2DD' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'update_window'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'update_window'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.38 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.438 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'NMS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'apply_filter_VITIS_LOOP_561_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'apply_filter_VITIS_LOOP_561_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.352 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.313 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Threshold_Pipeline_VITIS_LOOP_618_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_618_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_618_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.442 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Threshold' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.256 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.266 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'WriteToMem_Pipeline_write_image' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'write_image'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'write_image'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.302 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.251 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'WriteToMem' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.355 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.594 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'canny' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.447 seconds; current allocated memory: 1.457 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.641 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.221 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ReadFromMem_Pipeline_VITIS_LOOP_35_1_VITIS_LOOP_36_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ReadFromMem_Pipeline_VITIS_LOOP_35_1_VITIS_LOOP_36_2' pipeline 'VITIS_LOOP_35_1_VITIS_LOOP_36_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'ReadFromMem_Pipeline_VITIS_LOOP_35_1_VITIS_LOOP_36_2/m_axi_gmem_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ReadFromMem_Pipeline_VITIS_LOOP_35_1_VITIS_LOOP_36_2/m_axi_gmem_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ReadFromMem_Pipeline_VITIS_LOOP_35_1_VITIS_LOOP_36_2/m_axi_gmem_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ReadFromMem_Pipeline_VITIS_LOOP_35_1_VITIS_LOOP_36_2/m_axi_gmem_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ReadFromMem_Pipeline_VITIS_LOOP_35_1_VITIS_LOOP_36_2/m_axi_gmem_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ReadFromMem_Pipeline_VITIS_LOOP_35_1_VITIS_LOOP_36_2/m_axi_gmem_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ReadFromMem_Pipeline_VITIS_LOOP_35_1_VITIS_LOOP_36_2/m_axi_gmem_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ReadFromMem_Pipeline_VITIS_LOOP_35_1_VITIS_LOOP_36_2/m_axi_gmem_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ReadFromMem_Pipeline_VITIS_LOOP_35_1_VITIS_LOOP_36_2/m_axi_gmem_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ReadFromMem_Pipeline_VITIS_LOOP_35_1_VITIS_LOOP_36_2/m_axi_gmem_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ReadFromMem_Pipeline_VITIS_LOOP_35_1_VITIS_LOOP_36_2/m_axi_gmem_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ReadFromMem_Pipeline_VITIS_LOOP_35_1_VITIS_LOOP_36_2/m_axi_gmem_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ReadFromMem_Pipeline_VITIS_LOOP_35_1_VITIS_LOOP_36_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.752 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ReadFromMem_Pipeline_VITIS_LOOP_57_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ReadFromMem_Pipeline_VITIS_LOOP_57_3' pipeline 'VITIS_LOOP_57_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ReadFromMem_Pipeline_VITIS_LOOP_57_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.629 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ReadFromMem_Pipeline_VITIS_LOOP_62_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ReadFromMem_Pipeline_VITIS_LOOP_62_4' pipeline 'VITIS_LOOP_62_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ReadFromMem_Pipeline_VITIS_LOOP_62_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.354 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ReadFromMem_Pipeline_VITIS_LOOP_76_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ReadFromMem_Pipeline_VITIS_LOOP_76_5' pipeline 'VITIS_LOOP_76_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ReadFromMem_Pipeline_VITIS_LOOP_76_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.36 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ReadFromMem' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ReadFromMem'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.317 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Window2DG' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Window2DG' pipeline 'update_window' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Window2DG'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.625 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Filter2DG_Pipeline_apply_filter_VITIS_LOOP_400_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Filter2DG_Pipeline_apply_filter_VITIS_LOOP_400_1' pipeline 'apply_filter_VITIS_LOOP_400_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_43s_29ns_66_3_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_43s_30ns_66_3_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_43s_45ns_87_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2DG_Pipeline_apply_filter_VITIS_LOOP_400_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.046 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Filter2DG_Pipeline_VITIS_LOOP_448_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Filter2DG_Pipeline_VITIS_LOOP_448_4' pipeline 'VITIS_LOOP_448_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2DG_Pipeline_VITIS_LOOP_448_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.011 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Filter2DG_Pipeline_VITIS_LOOP_453_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Filter2DG_Pipeline_VITIS_LOOP_453_5' pipeline 'VITIS_LOOP_453_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2DG_Pipeline_VITIS_LOOP_453_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.365 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Filter2DG_Pipeline_VITIS_LOOP_468_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Filter2DG_Pipeline_VITIS_LOOP_468_6' pipeline 'VITIS_LOOP_468_6' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2DG_Pipeline_VITIS_LOOP_468_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.582 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Filter2DG' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2DG'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.454 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Split' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Split' pipeline 'VITIS_LOOP_607_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Split'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.651 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Window2DS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Window2DS' pipeline 'update_window' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Window2DS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.408 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Filter2DS_Pipeline_apply_filter_VITIS_LOOP_502_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Filter2DS_Pipeline_apply_filter_VITIS_LOOP_502_1' pipeline 'apply_filter_VITIS_LOOP_502_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_43s_24s_66_3_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_43s_25s_66_3_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2DS_Pipeline_apply_filter_VITIS_LOOP_502_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.227 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Filter2DS_Pipeline_VITIS_LOOP_530_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Filter2DS_Pipeline_VITIS_LOOP_530_4' pipeline 'VITIS_LOOP_530_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2DS_Pipeline_VITIS_LOOP_530_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.616 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Filter2DS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2DS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.412 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Window2DS_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Window2DS_1' pipeline 'update_window' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Window2DS_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.657 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Filter2DS_2_Pipeline_apply_filter_VITIS_LOOP_502_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Filter2DS_2_Pipeline_apply_filter_VITIS_LOOP_502_1' pipeline 'apply_filter_VITIS_LOOP_502_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_43s_24s_66_3_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_43s_25s_66_3_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2DS_2_Pipeline_apply_filter_VITIS_LOOP_502_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.793 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Filter2DS_2_Pipeline_VITIS_LOOP_530_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Filter2DS_2_Pipeline_VITIS_LOOP_530_4' pipeline 'VITIS_LOOP_530_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2DS_2_Pipeline_VITIS_LOOP_530_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.564 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Filter2DS_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2DS_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.379 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Magnitude_Direction' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Magnitude_Direction' pipeline 'VITIS_LOOP_638_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_9_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_27ns_43_3_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_30ns_43_3_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_3_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_32ns_64_7_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Magnitude_Direction'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.733 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Window2DM' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Window2DM' pipeline 'update_window' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Window2DM'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.839 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Window2DD' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Window2DD' pipeline 'update_window' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Window2DD'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.786 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'NMS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'NMS' pipeline 'apply_filter_VITIS_LOOP_561_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'NMS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.611 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Threshold_Pipeline_VITIS_LOOP_618_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Threshold_Pipeline_VITIS_LOOP_618_1' pipeline 'VITIS_LOOP_618_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Threshold_Pipeline_VITIS_LOOP_618_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.628 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Threshold' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_3_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Threshold'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.392 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'WriteToMem_Pipeline_write_image' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'WriteToMem_Pipeline_write_image' pipeline 'write_image' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'WriteToMem_Pipeline_write_image/m_axi_gmem_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'WriteToMem_Pipeline_write_image/m_axi_gmem_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'WriteToMem_Pipeline_write_image/m_axi_gmem_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'WriteToMem_Pipeline_write_image/m_axi_gmem_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'WriteToMem_Pipeline_write_image/m_axi_gmem_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'WriteToMem_Pipeline_write_image/m_axi_gmem_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'WriteToMem_Pipeline_write_image/m_axi_gmem_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'WriteToMem_Pipeline_write_image/m_axi_gmem_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'WriteToMem_Pipeline_write_image/m_axi_gmem_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'WriteToMem_Pipeline_write_image/m_axi_gmem_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'WriteToMem_Pipeline_write_image/m_axi_gmem_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'WriteToMem_Pipeline_write_image/m_axi_gmem_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'WriteToMem_Pipeline_write_image/m_axi_gmem_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'WriteToMem_Pipeline_write_image'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.157 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'WriteToMem' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'WriteToMem'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.991 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'canny' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny/src' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny/dst' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny/upperThresh' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny/lowerThresh' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'canny' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'src', 'dst', 'upperThresh', 'lowerThresh' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'canny'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.128 seconds; current allocated memory: 1.457 GB.
+INFO: [RTMG 210-278] Implementing memory 'canny_ReadFromMem_pad_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'canny_ReadFromMem_tempup_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'canny_Window2DG_LineBuffer_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'canny_Filter2DG_temp_V_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'canny_Filter2DG_tempup_V_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'canny_Window2DS_LineBuffer_V_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'canny_Filter2DS_temp_V_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'canny_Filter2DS_2_temp_V_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'dst_c_U(canny_fifo_w64_d12_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'upperThresh_c_U(canny_fifo_w32_d11_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'lowerThresh_c_U(canny_fifo_w32_d11_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pixel_stream_U(canny_fifo_w32_d64_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'window_stream_U(canny_fifo_w288_d5_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'gaussian_output_stream_U(canny_fifo_w43_d64_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'sobelx_stream_U(canny_fifo_w43_d64_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'sobely_stream_U(canny_fifo_w43_d64_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'sobelx_window_stream_U(canny_fifo_w387_d3_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'sobelx_output_stream_U(canny_fifo_w32_d64_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'sobely_window_stream_U(canny_fifo_w387_d3_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'sobely_output_stream_U(canny_fifo_w32_d64_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'Magnitude_Direction_output_stream_U(canny_fifo_w32_d64_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'gradient_output_stream_U(canny_fifo_w32_d64_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'Magnitude_Direction_window_stream_U(canny_fifo_w288_d5_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'gradient_window_stream_U(canny_fifo_w288_d5_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'nms_output_stream_U(canny_fifo_w32_d64_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'output_stream_U(canny_fifo_w32_d64_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Threshold_U0_U(canny_start_for_Threshold_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_WriteToMem_U0_U(canny_start_for_WriteToMem_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Window2DG_U0_U(canny_start_for_Window2DG_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Filter2DG_U0_U(canny_start_for_Filter2DG_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Split_U0_U(canny_start_for_Split_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Window2DS_U0_U(canny_start_for_Window2DS_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Window2DS_1_U0_U(canny_start_for_Window2DS_1_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Filter2DS_U0_U(canny_start_for_Filter2DS_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Magnitude_Direction_U0_U(canny_start_for_Magnitude_Direction_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Filter2DS_2_U0_U(canny_start_for_Filter2DS_2_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Window2DM_U0_U(canny_start_for_Window2DM_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Window2DD_U0_U(canny_start_for_Window2DD_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_NMS_U0_U(canny_start_for_NMS_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 5 seconds. CPU system time: 1 seconds. Elapsed time: 10.196 seconds; current allocated memory: 1.457 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.076 seconds; current allocated memory: 1.457 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for canny.
+INFO: [VLOG 209-307] Generating Verilog RTL for canny.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 153.66 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 43 seconds. CPU system time: 2 seconds. Elapsed time: 99.636 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 48 seconds. Total CPU system time: 4 seconds. Total elapsed time: 103.576 seconds; peak allocated memory: 1.457 GB.
